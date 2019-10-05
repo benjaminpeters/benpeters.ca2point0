@@ -60,6 +60,7 @@ export default class extends React.Component<props> {
 
   onMagnify(event) {
     let element = ReactDOM.findDOMNode(this);
+
     let magnifierX =
       event.pageX - element.offsetLeft - this.unmagnifiedDockOffsetLeft;
 
@@ -157,7 +158,7 @@ export default class extends React.Component<props> {
     let { magnification } = this.props;
 
     if (
-      magnification == undefined ||
+      magnification === undefined ||
       isNaN(magnification) ||
       magnification < 0
     ) {

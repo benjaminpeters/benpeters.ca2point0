@@ -7,6 +7,7 @@ import folder from "./assets/images/icons/folder.png";
 import appsFolder from "./assets/images/icons/apps-folder.png";
 import "./App.css";
 import Dock from "./components/dock";
+import DockItem from ".//components/dock/Item/dock-item";
 
 function App() {
   return (
@@ -18,31 +19,33 @@ function App() {
         magnification={0.5}
         magnifyDirection="up"
       >
-        <Dock.Item
+        <DockItem
           key={1}
+          title={"Github"}
           onClick={() => {
             window.open("https://github.com/benjaminpeters", "_blank");
           }}
         >
           <img className="iconImg" src={github} />
-        </Dock.Item>
-        <Dock.Item
+        </DockItem>
+        <DockItem
           key={2}
+          title={"LinkedIn"}
           onClick={() => {
             window.open("https://www.linkedin.com/in/benjamin416/", "_blank");
           }}
         >
           <img className="iconImg" src={linkedin} />
-        </Dock.Item>
-        <Dock.Item key={3} onClick={() => {}}>
+        </DockItem>
+        <DockItem title={"Resume"} key={3} onClick={() => {}}>
           <img className="iconImg" height="100%" width="100%" src={resume} />
-        </Dock.Item>
-        <Dock.Item key={4} onClick={() => {}}>
+        </DockItem>
+        <DockItem title={"Side Projects"} key={4} onClick={() => {}}>
           <img className="iconImg" height="100%" width="100%" src={folder} />
-        </Dock.Item>
-        <Dock.Item key={5} onClick={() => {}}>
+        </DockItem>
+        <DockItem title={"Apps"} key={5} onClick={() => {}}>
           <img className="iconImg" src={appsFolder} />
-        </Dock.Item>
+        </DockItem>
       </Dock>
     </div>
   );
