@@ -16,7 +16,11 @@ export default class extends React.Component<props> {
         }}
       >
         {this.state.showTitle ? (
-          <div className={"title"}>{this.props.title}</div>
+          <>
+            <div className={"title arrow_box"}>
+              <div className={"titleText"}>{this.props.title}</div>
+            </div>
+          </>
         ) : null}
         <div
           className={"icon"}

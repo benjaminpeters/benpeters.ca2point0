@@ -5,6 +5,7 @@ import linkedin from "./assets/images/icons/linkedin-logo.svg";
 import resume from "./assets/images/icons/resume-pdf.svg";
 import folder from "./assets/images/icons/folder.png";
 import appsFolder from "./assets/images/icons/apps-folder.png";
+import finder from ".//assets/images/icons/finder.png";
 import "./App.css";
 import Dock from "./components/dock";
 import DockItem from ".//components/dock/Item/dock-item";
@@ -19,6 +20,9 @@ function App() {
         magnification={0.5}
         magnifyDirection="up"
       >
+        <DockItem key={1} title={"About Me"} onClick={() => {}}>
+          <img className="iconImg" src={finder} />
+        </DockItem>
         <DockItem
           key={1}
           title={"Github"}

@@ -1,8 +1,58 @@
 .item {
   z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .title {
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  background-color: #312f31;
+  padding: 5px 15px;
+  border-radius: 4px 4px 0 0;
+  /* box-shadow: 1px 1px 50px 4px rgba(0, 0, 0, 0.8); */
 }
+.titleText {
+  color: white;
+  @font-face {
+    font-family: "San Francisco";
+    font-weight: 400;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+  }
+}
+
+.arrow_box {
+  position: relative;
+  background: #312f31;
+  border: 1px solid #020203;
+}
+.arrow_box:after,
+.arrow_box:before {
+  top: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.arrow_box:after {
+  border-color: rgba(49, 47, 49, 0);
+  border-top-color: #312f31;
+  border-width: 10px;
+  margin-left: -10px;
+}
+.arrow_box:before {
+  border-color: rgba(2, 2, 3, 0);
+  border-top-color: #020203;
+  border-width: 11px;
+  margin-left: -11px;
+}
+
 .icon {
   display: flex;
   flex-direction: column;
