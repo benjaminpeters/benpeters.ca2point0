@@ -1,6 +1,6 @@
 import React from "react";
 import DockItem from "./Item/dock-item";
-import DockBackground from "./dock-background";
+import DockBackground from "./background/background";
 
 export default function(props) {
   React.Children.forEach(props.children, item => {

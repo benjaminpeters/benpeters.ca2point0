@@ -8,7 +8,11 @@ export default function(props) {
       height: `${props.height}px`,
       boxSizing: "border-box",
       border: props.debug ? "1px solid red" : null,
-      zIndex: 0
+      zIndex: 0,
+      backgroundColor: "#ccc",
+      opacity: 0.6,
+      borderRadius: "4px 4px 0 0",
+      boxShadow: "1px 1px 50px 4px rgba(0,0,0,.8)"
     },
     (() => {
       switch (props.magnifyDirection) {
