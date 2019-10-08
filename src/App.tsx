@@ -6,13 +6,16 @@ import resume from "./assets/images/icons/resume-pdf.svg";
 import folder from "./assets/images/icons/folder.png";
 import appsFolder from "./assets/images/icons/apps-folder.png";
 import finder from ".//assets/images/icons/finder.png";
+
 import "./App.css";
 import Dock from "./components/dock";
-import DockItem from ".//components/dock/Item/dock-item";
+import DockItem from "./components/dock/Item/dock-item";
+import TopMenu from "./components/TopMenu";
 
 function App() {
   return (
     <div className="App backgroundImage">
+      <TopMenu />
       <Dock
         className="dockContainer"
         debug={false}
@@ -20,7 +23,7 @@ function App() {
         magnification={0.5}
         magnifyDirection="up"
       >
-        <DockItem key={1} title={"About Me"} onClick={() => {}}>
+        <DockItem key={0} title={"About Me"} onClick={() => {}}>
           <img className="iconImg" src={finder} />
         </DockItem>
         <DockItem
