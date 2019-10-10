@@ -4,10 +4,15 @@ import Dock from "./dock";
 import DockItem from "./Item/dock-item";
 import DockOffset from "./dock-offset";
 
-export default class extends React.Component<props> {
-  static Item = DockItem;
+export default class extends React.Component {
+  constructor(props) {
+    super(props)
 
-  state = { magnifierX: null };
+    this.state = {
+      magnifierX: null
+    }
+  }
+  static Item = DockItem;
 
   render() {
     let offsetLeft =

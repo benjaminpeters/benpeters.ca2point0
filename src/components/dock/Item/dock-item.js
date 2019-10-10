@@ -1,9 +1,14 @@
 import React from "react";
 import "./dock-item.css";
 
-export default class extends React.Component<props> {
-  state = { showTitle: false };
+export default class extends React.Component {
+  constructor(props) {
+    super(props)
 
+    this.state = {
+      showTitle: false
+    }
+  }
   render() {
     return (
       <div

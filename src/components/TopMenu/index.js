@@ -3,7 +3,7 @@ import "./TopMenu.css";
 
 import bigBen from "../../assets/images/icons/fox.svg";
 
-export default class extends React.Component<props> {
+export default class extends React.Component {
   render() {
     return (
       <div className="container">
