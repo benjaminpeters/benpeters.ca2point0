@@ -19,7 +19,7 @@ function App() {
       <Dock
         className="dockContainer"
         debug={false}
-        width={600}
+        width={window.innerWidth < 600 ? 300 : 600}
         magnification={0.5}
         magnifyDirection="up"
       >
