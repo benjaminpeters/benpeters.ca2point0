@@ -22,3 +22,9 @@
   min-height: 100%;
   height: calc(100% - 4px - 2px);
 }
+
+.pdfViewer{
+  position: absolute;
+  z-index: 10;
+  visibility: hidden;
+}
