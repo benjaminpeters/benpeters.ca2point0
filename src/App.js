@@ -12,27 +12,11 @@ import Dock from "./components/dock";
 import DockItem from "./components/dock/Item/dock-item";
 import TopMenu from "./components/TopMenu";
 
-import benResume from "./assets/resume/benResume.pdf"
-
-import { Document, Page, pdfjs } from "react-pdf";
-pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
-
-const onDocumentLoadSuccess = ({ }) => {
-    console.log('success')
-  }
-
 function App() {
   return (
     <div className="App backgroundImage">
       <TopMenu />
-      <div className="pdfViewer">
-        <Document
-            file={benResume}
-            onLoadSuccess={onDocumentLoadSuccess}
-          >
-          <Page pageNumber={1} />
-          </Document>
-      </div>
+
       <Dock
         className="dockContainer"
         debug={false}
@@ -59,13 +43,13 @@ function App() {
             window.open("https://www.linkedin.com/in/benjamin416/", "_blank");
           }}
         >
-          <img className="iconImg" src={linkedin} alt="LinkedIn"/>
+          <img className="iconImg" src={linkedin} alt="LinkedIn" />
         </DockItem>
         <DockItem title={"Resume"} key={3} onClick={() => {}}>
           <img className="iconImg" src={resume} alt="Resume" />
         </DockItem>
         <DockItem title={"Side Projects"} key={4} onClick={() => {}}>
-          <img className="iconImg" src={folder} alt="Side Projects"/>
+          <img className="iconImg" src={folder} alt="Side Projects" />
         </DockItem>
         <DockItem title={"Apps"} key={5} onClick={() => {}}>
           <img className="iconImg" src={appsFolder} alt="Apps" />
